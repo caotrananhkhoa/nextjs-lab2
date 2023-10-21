@@ -12,9 +12,7 @@ type LoginUserAccount = {
   password: string;
 };
 
-const appwriteClient = new Client();
-
-appwriteClient.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectId);
+const appwriteClient = new Client().setEndpoint(process.env.APPWRITE_URL!).setProject(process.env.APPWRITE_PROJECTID!);
 
 export const account = new Account(appwriteClient);
 
@@ -34,6 +32,7 @@ export class AppwriteService {
         return userAccount;
       }
     } catch (error: any) {
+      console.log(error)
       throw error;
     }
   }
@@ -42,6 +41,7 @@ export class AppwriteService {
     try {
       return await account.createEmailSession(email, password);
     } catch (error: any) {
+      console.log(error)
       throw error;
     }
   }
