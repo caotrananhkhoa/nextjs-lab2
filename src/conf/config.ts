@@ -1,6 +1,6 @@
 const conf = {
-    appwriteUrl: String(process.env.APPWRITE_URL!),
-    appwriteProjectId: String(process.env.APPWRITE_PROJECTID!)
+    appwriteUrl: String(process.env.NEXT_PUBLIC_APPWRITE_URL!),
+    appwriteProjectId: String(process.env.NEXT_PUBLIC_APPWRITE_PROJECTID!)
 }
 
 export default conf
