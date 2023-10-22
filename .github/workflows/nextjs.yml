@@ -27,6 +27,7 @@ concurrency:
 jobs:
   # Build job
   build:
+    # Get secrets variable in Github repository (Settings >> Secrets and variables
     env:
          NEXT_PUBLIC_AW_URL: ${{ secrets.NEXT_PUBLIC_AW_URL }}
          NEXT_PUBLIC_AW_PID: ${{ secrets.NEXT_PUBLIC_AW_PID }}
