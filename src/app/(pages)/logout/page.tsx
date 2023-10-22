@@ -15,6 +15,8 @@ const LogoutPage = () => {
       router.replace("/");
     });
   }, []);
+
+  return (<></>)
 };
 
 export default LogoutPage;
