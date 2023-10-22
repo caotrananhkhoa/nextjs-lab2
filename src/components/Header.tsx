@@ -37,7 +37,7 @@ export default function Header() {
                             <li key={item.name}>
                                 <Link
                                     href={item.href}
-                                    className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-primary"
+                                    className="inline-flex items-center text-sm font-semibold text-gray-800 hover:underline"
                                 >
                                     {item.name}
                                 </Link>
@@ -48,13 +48,13 @@ export default function Header() {
                 <div className="space-x-2 lg:block">
                     <Link
                         href={authStatus ? "/profile" : "/signup"}
-                        className="rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-primary hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        className="rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-primary hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                         {authStatus ? "Profile" : "Sign up"}
                     </Link>
                     <Link
                         href={authStatus ? "/logout" : "/login"}
-                        className="rounded-md border border-primary px-3 py-2 text-sm font-semibold text-primary shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        className="rounded-md border border-primary px-3 py-2 text-sm font-semibold text-primary shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary hover:bg-black hover:text-white hover:border-white"
                     >
                         {authStatus ? "Logout" : "Log In"}
                     </Link>

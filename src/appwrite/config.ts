@@ -12,7 +12,9 @@ type LoginUserAccount = {
   password: string;
 };
 
-const appwriteClient = new Client().setEndpoint(process.env.APPWRITE_URL!).setProject(process.env.APPWRITE_PROJECTID!);
+const appwriteClient = new Client()
+
+appwriteClient.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectId);
 
 export const account = new Account(appwriteClient);
 

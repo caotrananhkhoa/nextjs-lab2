@@ -27,6 +27,6 @@ const Logo1 = () => {
 };
 
 const Logo = () => {
-    return (<img src="/favicon.ico" alt="Logo" className="max-w-[50px]"/>)
+    return (<img src="./favicon.ico" alt="Logo" className="max-w-[50px]"/>)
 }
 export default Logo;
