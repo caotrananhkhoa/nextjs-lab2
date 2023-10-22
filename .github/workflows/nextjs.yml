@@ -28,6 +28,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    env:
+     NEXT_PUBLIC_AW_URL: ${env.NEXT_PUBLIC_AW_URL}
+     NEXT_PUBLIC_AW_PID: ${env.NEXT_PUBLIC_AW_PID}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
