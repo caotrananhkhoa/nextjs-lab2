@@ -12,7 +12,7 @@ type LoginUserAccount = {
   password: string;
 };
 
-const appwriteClient = new Client()
+const appwriteClient = new Client();
 
 appwriteClient.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectId);
 
